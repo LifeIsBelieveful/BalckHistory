@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+    //android:fitsSystemWindows="true" 삭제
+
+    //상단에 헤더 추가하는 위치
+
+    <include layout="@layout/app_bar_navigation_drawer" />
+    //좌측에 나오는 네비게이션 뷰가 추가되는 위치
+
+    <fragment
+        android:id="@+id/nav_view"
+        android:name="com.example.kcci.history101.BlankFragment"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@android:dimen/notification_large_icon_height" />
+
+    //android:fitsSystemWindows="true" 삭제
+
+    //headerLayout은 상단메뉴
+    //menu는 상단 아래 메뉴
+
+
+</android.support.v4.widget.DrawerLayout>

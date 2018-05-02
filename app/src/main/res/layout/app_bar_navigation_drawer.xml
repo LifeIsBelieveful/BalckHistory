@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.kcci.history101.NavigationDrawerActivity"
+    android:background="@drawable/bg1">
+
+
+//ListView가 app bar 밑으로 보여지도록 레이아웃을 짜기 위해서 app bar에 id 부여
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#000000"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <WebView
+        android:layout_margin="20dp"
+        android:layout_below="@id/app_bar"
+        android:id="@+id/textvv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#CCff"
+        />
+    <!--<TextView-->
+        <!--android:layout_margin="20dp"-->
+        <!--android:layout_below="@id/app_bar"-->
+        <!--android:id="@+id/textvv"-->
+        <!--android:textSize="30dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#CCff"-->
+        <!--android:scrollbars="vertical"-->
+        <!--/>-->
+
+    <com.fsn.cauly.CaulyAdView
+        xmlns:app="http://schemas.android.com/apk/res/com.example.kcci.history101"
+        android:id="@+id/xmladview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:appcode="CAULY"
+        app:effect="RightSlide"
+        app:dynamicReloadInterval="true"
+        app:reloadInterval="20"
+        app:bannerHeight="Fixed"
+        />
+
+</RelativeLayout>
